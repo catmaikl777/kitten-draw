@@ -11,7 +11,7 @@ const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
     origin: [
-      "https://your-drawing-app.vercel.app",
+      "https://kittendraw.vercel.app",
       "https://your-drawing-app-git-main-your-username.vercel.app",
       "https://your-drawing-app-your-username.vercel.app",
       "http://localhost:3000",
@@ -24,7 +24,7 @@ const io = socketIo(server, {
 
 app.use(cors({
   origin: [
-    "https://your-drawing-app.vercel.app",
+    "https://kittendraw.vercel.app",
     "http://localhost:3000"
   ],
   credentials: true
