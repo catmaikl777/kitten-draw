@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: drawing-app-backend
+    name: art-workout-server
     env: node
     plan: free
     buildCommand: npm install
@@ -8,4 +8,5 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
-    healthCheckPath: /health
+      - key: PORT
+        value: 10000
