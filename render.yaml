@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: art-workout-server
+    name: collab-draw-back
     env: node
     plan: free
     buildCommand: npm install
@@ -8,5 +8,4 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
-      - key: PORT
-        value: 10000
+    healthCheckPath: /health
