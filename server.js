@@ -1,7 +1,6 @@
 const express = require('express');
 const http = require('http');
 const socketIo = require('socket.io');
-const path = require('path');
 
 const app = express();
 const server = http.createServer(app);
@@ -14,13 +13,6 @@ const io = socketIo(server, {
 
 // Хранилище комнат
 const rooms = new Map();
-
-app.use(express.static(path.join(__dirname, 'public')));
-
-// Маршрут для основной страницы
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
 
 // Функции для работы с комнатами
 function generateRoomCode() {
